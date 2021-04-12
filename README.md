@@ -110,4 +110,4 @@ dwa typy.
 
 #### 3D
 
-![PCA-3D](https://github.com/ML-GroupB/ml-star-type-classification-data/img/pca-3d.png)
+![PCA-3D](https://github.com/ML-GroupB/ml-star-type-classification-data/img/pca-3d.gif)
