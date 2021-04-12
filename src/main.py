@@ -7,7 +7,7 @@ from src.visualise import visualise
 pd.options.mode.chained_assignment = None
 
 # import data and test
-stars_data = pd.read_csv("../Stars.csv")
+stars_data = pd.read_csv("stars.csv")
 
 # test dataset
 print(stars_data.info())
