@@ -1,2 +1,6 @@
 /.idea/
 Stars.csv
+
+/src/knn.mdl
+/src/gnb.mdl
+/src/svc.mdl
