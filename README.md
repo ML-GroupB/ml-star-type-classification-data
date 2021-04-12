@@ -36,7 +36,7 @@ Ro = _6.9551 x 10^8 m_ – promień Słońca
 
 Rozpoczynamy poprzez pokazanie zależności pomiędzy parametrami. ScatterMatrix pokazujący jak zależą od siebie wartości.
 
-![ScatterMatrix](https://github.com/ML-GroupB/ml-star-type-classification-data/img/scatter_matrix.png)
+![ScatterMatrix](./img/scatter_matrix.png)
 
 ### Wartości liczbowe — features
 
@@ -45,7 +45,7 @@ Rozpoczynamy poprzez pokazanie zależności pomiędzy parametrami. ScatterMatrix
 Rozkład temperatury (boxplot) pokazuje, że najwięcej gwiazd ma temperaturę z zakresu 4000K - 15000K. Mediana to ok
 6000K. Niektóre gwiazdy mają jednak temperatury sięgające znacznie więcej.
 
-![Temperatue](https://github.com/ML-GroupB/ml-star-type-classification-data/img/temp.png)
+![Temperatue](./img/temp.png)
 
 
 ####2. Jasność
@@ -53,7 +53,7 @@ Rozkład temperatury (boxplot) pokazuje, że najwięcej gwiazd ma temperaturę z
 Światłość waha się bardziej niż temperatura, dlatego należy podawać ją logarytmicznie. Mediana jest mniejsza od
 wielkości naszego Słońca.
 
-![Luminosity](https://github.com/ML-GroupB/ml-star-type-classification-data/img/lum.png)
+![Luminosity](./img/lum.png)
 
 
 ####3. Promień
@@ -62,12 +62,12 @@ Promienie tak samo, jak jasność należy pokazywać logarytmicznie z uwagi na d
 przybliżeniu równy Promieniowi naszego słońca. Większość gwiazd jest 100 razy większa lub mniejsza, lecz są też gwiazdy
 mocno oddalone od średniej na wykresie.
 
-![Radius](https://github.com/ML-GroupB/ml-star-type-classification-data/img/radius.png)
+![Radius](./img/radius.png)
 
 
 ####4. Absolutna wielkość gwiazdowa
 
-![Magnitude](https://github.com/ML-GroupB/ml-star-type-classification-data/img/magn.png)
+![Magnitude](./img/magn.png)
 
 
 ### Wartości kategoryczne
@@ -77,12 +77,12 @@ mocno oddalone od średniej na wykresie.
 W kolorze przeważa czerwony (połowa wszystkich gwiazd ze zbioru jest tego koloru). Znaczący udział w kolorach biorą
 Czerwony, Niebieski oraz Biały (najczęściej gwiazda będzie miała jeden z tych lub ich mieszankę).
 
-![Color](https://github.com/ML-GroupB/ml-star-type-classification-data/img/color.png)
+![Color](./img/color.png)
 
 
 ####6. Klasa widmowa ([info](https://en.wikipedia.org/wiki/Asteroid_spectral_types))
 
-![Spectral Class](https://github.com/ML-GroupB/ml-star-type-classification-data/img/spec.png)
+![Spectral Class](./img/spec.png)
 
 ## Zależności danych w zbiorze danych
 
@@ -91,11 +91,11 @@ Czerwony, Niebieski oraz Biały (najczęściej gwiazda będzie miała jeden z ty
 Wykresy korelacji pokazują, że najbardziej zależne są Promień-Jasność oraz Temperatura-Jasność, dlatego warto zobaczyć
 wykresy Typu gwiazdy od tych 2 zestawów.
 
-![Correlation](https://github.com/ML-GroupB/ml-star-type-classification-data/img/corel.png)
+![Correlation](./img/corel.png)
 
-![Radius / Luminosity](https://github.com/ML-GroupB/ml-star-type-classification-data/img/radius-lum.png)
+![Radius / Luminosity](./img/radius-lum.png)
 
-![Luminosity / Temperature](https://github.com/ML-GroupB/ml-star-type-classification-data/img/lum-temp.png)
+![Luminosity / Temperature](./img/lum-temp.png)
 
 Wykres Jasności od Temperatury jest właśnie dlatego dosyć popularny, aby pokazać jak dzielą się gwiazdy ze względu na te
 dwa typy.
@@ -106,8 +106,8 @@ dwa typy.
 
 #### 2D
 
-![PCA-2D](https://github.com/ML-GroupB/ml-star-type-classification-data/img/pca-2d.png)
+![PCA-2D](./img/pca-2d.png)
 
 #### 3D
 
-![PCA-3D](https://github.com/ML-GroupB/ml-star-type-classification-data/img/pca-3d.gif)
+![PCA-3D](./img/pca-3d.gif)
