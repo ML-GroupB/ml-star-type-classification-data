@@ -1,9 +1,8 @@
 import pandas as pd
-import pickle
 
 from lib.data_processing import standard_scaler, simple_imputer, ordinal_encoder
 from src.fit_models import fit_models
-from visualize import visualise
+from src.visualise import visualise
 
 pd.options.mode.chained_assignment = None
 
@@ -32,7 +31,7 @@ stars_data.Color.loc[stars_data.Color == 'yellowish'] = 'Yellowish'
 
 ### VISUALISATION ###
 
-# visualise(stars_data, X, y)
+visualise(stars_data, X, y)
 
 ### ENCODING ###
 
@@ -45,4 +44,3 @@ X[categorical_features] = ordinal_encoder(X[categorical_features])
 ### FIT MODELS ###
 
 fit_models(X, y)
-

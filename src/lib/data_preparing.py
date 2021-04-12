@@ -67,5 +67,3 @@ def test_split(data, test_size=0.3):
 # housing = pd.read_csv("help/housing.csv")
 # housing.hist(figsize=(30, 20))
 # save_fig("img/my_image.png")
-
-

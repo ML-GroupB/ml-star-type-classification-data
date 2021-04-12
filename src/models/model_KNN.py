@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -25,8 +26,8 @@ def knn_model(X_train, X_test, y_train, y_test):
             max_accuracy = acc
             knn_max = knn
 
-    # plt.plot(i_range, accuracies)
-    # plt.title("Accuracies")
-    # plt.show()
+    plt.plot(i_range, accuracies)
+    plt.title("Accuracies")
+    plt.show()
 
     return knn_max, max_accuracy

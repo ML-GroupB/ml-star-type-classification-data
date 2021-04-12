@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import EngFormatter
 
 
-def data_plotter(X, y, x_axis, y_axis, title, target_names, x_label=None, y_label=None, x_unit=None, y_unit=None, scale_x=None, scale_y=None):
+def data_plotter(X, y, x_axis, y_axis, title, target_names, x_label=None, y_label=None, x_unit=None, y_unit=None,
+                 scale_x=None, scale_y=None):
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
@@ -42,4 +43,3 @@ def box_plotter(feature, data, scale=None):
     ax1.boxplot(data[feature], vert=False)
     ax1.grid()
     ax1.set_title(feature + ' - boxplot')
-

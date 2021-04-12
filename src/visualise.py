@@ -8,8 +8,8 @@ from sklearn.preprocessing import StandardScaler
 
 from lib.data_printer import data_plotter, box_plotter
 
-def visualise(data, X, y):
 
+def visualise(data, X, y):
     ### VISUALISATION - Intro ###
 
     # scatter plot
@@ -54,7 +54,6 @@ def visualise(data, X, y):
     # luminosity / radius good good
     # temperature maybe good???
 
-
     # check correlations' results
 
     stars_names = ['Red Dwarf', 'Brown Dwarf', 'White Dwarf', 'Main Sequence', 'Super Giants', 'Hyper Giants']
@@ -62,7 +61,8 @@ def visualise(data, X, y):
     data_plotter(X, y, 1, 2, "Stars", stars_names, X.columns[1] + " [Lo = 3.828 x 10^26 Watts]",
                  X.columns[2] + " [Ro = 6.9551 x 10^8 m]", "Lo", "Ro", "log", "log")
     plt.show()
-    data_plotter(X, y, 0, 1, "Stars", stars_names, X.columns[0] + " [K]", X.columns[1] + " [Lo = 3.828 x 10^26 Watts]", "K",
+    data_plotter(X, y, 0, 1, "Stars", stars_names, X.columns[0] + " [K]", X.columns[1] + " [Lo = 3.828 x 10^26 Watts]",
+                 "K",
                  "Lo", None, "log")
     plt.show()
 
@@ -109,7 +109,6 @@ def visualise(data, X, y):
     if gif:
         def rotate(angle):
             ax.view_init(azim=angle)
-
 
         print("Making animation")
         rot_animation = animation.FuncAnimation(fig, rotate, frames=range(0, 360, 1))
