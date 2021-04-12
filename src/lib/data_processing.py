@@ -1,7 +1,18 @@
 from sklearn import impute
 
 # SimpleImputer
-from sklearn.preprocessing import OrdinalEncoder
+from sklearn.preprocessing import OrdinalEncoder, StandardScaler, OneHotEncoder
+
+
+def standard_scaler(data):
+    """
+    Standardize features by removing the mean and scaling to unit variance
+
+    :param data: Array like list.
+    :return: Data with standardized features.
+    """
+    scaler = StandardScaler()
+    return scaler.fit_transform(data)
 
 
 def simple_imputer(data, strategy="mean"):
@@ -13,7 +24,7 @@ def simple_imputer(data, strategy="mean"):
     :return: Data with imputer on X.
     """
     imp = impute.SimpleImputer(strategy=strategy)
-    return data.fit(imp)
+    return imp.fit_transform(data)
 
 
 # OrdinalEncoder
@@ -39,14 +50,12 @@ def one_hot_encoder(data):
     :return:
     """
     onehot = OneHotEncoder()
-    data = onehot.fit_transform(data)
-    return data.toarray()
+    return onehot.fit_transform(data)
 
 
 if __name__ == "__main__":
     from sklearn.pipeline import Pipeline
     from sklearn.impute import SimpleImputer
-    from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
     from sklearn.compose import ColumnTransformer
 
@@ -88,7 +97,6 @@ if __name__ == "__main__":
     # lin_predictions
     print(cross_val_score(lin_reg, data_prepared, Y))
 
-
     # DecisionTreeRegressor
     tree_reg = DecisionTreeRegressor()
     tree_reg.fit(data_prepared, Y)
@@ -98,7 +106,6 @@ if __name__ == "__main__":
     # tree_predictions
     print(cross_val_score(tree_reg, data_prepared, Y))
 
-
     # RandomForestRegressor
     forest_reg = RandomForestRegressor()
     forest_reg.fit(data_prepared, Y)
@@ -107,5 +114,3 @@ if __name__ == "__main__":
 
     # forest_predictions
     print(cross_val_score(forest_reg, data_prepared, Y))
-
-
