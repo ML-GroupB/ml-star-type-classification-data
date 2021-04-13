@@ -6,7 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 # 70-80% is usual but sometimes it gets even even more <3
 def knn_model(X_train, X_test, y_train, y_test):
-    i_range = range(1, 60)
+    i_range = range(1, 5)
     max_accuracy = 0
     accuracies = []
 
@@ -26,8 +26,9 @@ def knn_model(X_train, X_test, y_train, y_test):
             max_accuracy = acc
             knn_max = knn
 
-    plt.plot(i_range, accuracies)
-    plt.title("Accuracies")
-    plt.show()
+    # Accuracy plot in README
+    # plt.plot(i_range, accuracies)
+    # plt.title("Accuracies")
+    # plt.show()
 
     return knn_max, max_accuracy
