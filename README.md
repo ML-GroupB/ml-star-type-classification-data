@@ -72,7 +72,7 @@ __4. Absolutna wielkość gwiazdowa__
 ![Magnitude](./img/magn.png)
 
 
-### Wartości kategoryczne
+### Wartości kategoryczne — features
 
 __5. Kolor__
 

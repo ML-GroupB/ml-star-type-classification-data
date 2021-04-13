@@ -3,3 +3,5 @@
 /src/knn.mdl
 /src/gnb.mdl
 /src/svc.mdl
+/src/rfc.mdl
+/src/dtc.mdl
