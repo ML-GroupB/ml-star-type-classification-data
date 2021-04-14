@@ -13,21 +13,30 @@ stars_data = pd.read_csv("stars.csv")
 print(stars_data.info())
 print()  # newline
 
-# split targets and features
-X = stars_data.drop(columns="Type")
-y = stars_data["Type"]
-
 numerical_features = ['Temperature', 'Luminosity', 'Radius', 'Magnitude']
 categorical_features = ['Color', 'Spectral_Class']
 
+
 # correct bad names
-stars_data.Color.loc[stars_data.Color == 'Blue-white'] = 'Blue-White'
-stars_data.Color.loc[stars_data.Color == 'Blue White'] = 'Blue-White'
-stars_data.Color.loc[stars_data.Color == 'Blue white'] = 'Blue-White'
-stars_data.Color.loc[stars_data.Color == 'yellow-white'] = 'White-Yellow'
-stars_data.Color.loc[stars_data.Color == 'Yellowish White'] = 'White-Yellow'
-stars_data.Color.loc[stars_data.Color == 'white'] = 'White'
-stars_data.Color.loc[stars_data.Color == 'yellowish'] = 'Yellowish'
+def switch_names(text):
+    return {
+        'Blue-white': 'Blue-White',
+        'Blue White': 'Blue-White',
+        'Blue white': 'Blue-White',
+        'yellow-white': 'White-Yellow',
+        'Yellowish White': 'White-Yellow',
+        'white': 'White',
+        'yellowish': 'Yellowish'
+    }.get(text, text)
+
+
+for i in range(len(stars_data)):
+    text = stars_data.get("Color")[i]
+    stars_data.get("Color")[i] = switch_names(text)
+
+# split targets and features
+X = stars_data.drop(columns="Type")
+y = stars_data["Type"]
 
 ### VISUALISATION ###
 
