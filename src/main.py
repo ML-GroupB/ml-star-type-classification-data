@@ -31,7 +31,7 @@ stars_data.Color.loc[stars_data.Color == 'yellowish'] = 'Yellowish'
 
 ### VISUALISATION ###
 
-visualise(stars_data, X, y)
+visualise(stars_data)
 
 ### ENCODING ###
 
