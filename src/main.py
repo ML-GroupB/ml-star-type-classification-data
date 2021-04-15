@@ -26,7 +26,8 @@ def switch_names(text):
         'yellow-white': 'White-Yellow',
         'Yellowish White': 'White-Yellow',
         'white': 'White',
-        'yellowish': 'Yellowish'
+        'yellowish': 'Yellowish',
+        'Pale yellow orange': 'Yellow-Orange'
     }.get(text, text)
 
 
