@@ -41,7 +41,7 @@ y = stars_data["Type"]
 
 ### VISUALISATION ###
 
-visualise(stars_data, X, y)
+visualise(stars_data)
 
 ### ENCODING ###
 

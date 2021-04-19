@@ -86,6 +86,7 @@ __6. Klasa widmowa ([info](https://en.wikipedia.org/wiki/Asteroid_spectral_types
 
 ![Spectral Class](./img/spec.png)
 
+![Heatmap](./img/cat_heat.png)
 ## Zależności danych w zbiorze danych
 
 ### Korelacje
@@ -146,10 +147,18 @@ Początkowo przy nieoczyszczonych danych (przed użyciem StandardScaler'a) model
 Po przygotowaniu danych przyjaznych dla predykcji model ten jest skuteczny na równi z SVC.
 Z wykresu widać im mniejsza liczba sąsiadów tym lepiej — jeden działa najlepiej 😄.
 
+### RFC - Random Forest Classifier
+
+Model dorównuje KNN jednak mocno zależy od parametru `n_estimators`, który przy coraz większych wartościach potrzebuje więcej czasu na uczenie się.
+
+### DTC - Decision Tree Classifier
+
+DTC ma bardzo podobne wyniki jak RFC. W przypadku uczenia się na bardzo małej ilości zbioru danych,
+osiąga wraz z RFC bardzo dobre wyniki.
+
 <br/>
 
-Każdy model wyszkolony na pełnym zbiorze danych jest zapisywany odpowiednio do pliku
-`model-name.mdl`
+Każdy model wyszkolony na pełnym zbiorze danych jest zapisywany odpowiednio do pliku `model-name.mdl`
 
 ## License
 
