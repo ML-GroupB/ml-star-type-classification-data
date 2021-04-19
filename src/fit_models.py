@@ -9,7 +9,7 @@ from src.models.model_KNN import knn_model
 from src.models.model_RFC import rfc_model
 
 
-def fit_models(X, y, test_size=0.9):
+def fit_models(X, y, test_size=0.2):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
     accuracies = [0] * 5
 
